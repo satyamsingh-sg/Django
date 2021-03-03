@@ -1,0 +1,119 @@
+
+  <!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Profile</title>
+  <style>
+  .boxs{
+    width:100%;
+    height: 100%;
+    position:relative;
+    top:50px;
+
+
+}
+
+
+
+.boxs div {
+       width:300px;
+       height: 350px;
+       position:relative;
+       top:0px;
+       box-shadow: 10px 10px 5px grey;
+       float:left;
+       margin-left :140px;
+       margin-bottom:40px;
+
+
+
+}
+.boxs div p{
+       width:300px;
+       height: 350px;
+       align-items: center;
+
+
+}
+.nov{
+  height:80px;
+  wight:100%;
+  background-color:pink;
+  padding:10px;
+}
+.nov h3{
+  margin-top:8px;
+  color:black;
+}
+.btn{
+  position:relative;
+  left:50%;
+  top:20px;
+
+}
+button{
+  padding:12px;
+  border-radius: 25px;
+  background-color:#D2691E;
+  color:black;
+
+}
+
+ </style>
+</head>
+
+<body>
+<div class="nov">  <center><h3> All india historial places </h3></center> </div>
+      <div class="btn">
+      <a href="{% url "image_upload" %}"><button>Add Image</button></a>
+          
+      </div>
+    
+      
+        <div class="boxs">
+
+ 
+ 
+          
+     
+           {% for hotel in hotel_images %} 
+            
+         <div>
+         
+        <img src="{{ hotel.Photo.url }}">
+         <center><p>{{hotel.description }}<p></center>
+            </div> 
+    {% endfor %} 
+      
+      
+      </div>
+
+       
+
+</body>
+
+</html>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    

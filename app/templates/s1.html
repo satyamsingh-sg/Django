@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Hotel_image</title> 
+    <style>
+    .nov{
+  height:80px;
+  wight:100%;
+  background-color:pink;
+  padding:10px;
+  margin-bottom:20px;
+}
+.nov h3{
+  margin-top:0px;
+  color:black;
+}
+    </style>
+</head> 
+<body> 
+<div class="nov">  <center><h3> All india historial places </h3></center> </div>
+    <form method = "POST" enctype="multipart/form-data"> 
+        {% csrf_token %} 
+      
+       {{fm}}
+        <button type="submit">Upload</button> 
+    </form> 
+       
+  <a href="{% url "hotel_images" %}">show image</a>
+</body> 
+</html> 
